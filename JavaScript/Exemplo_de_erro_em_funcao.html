@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<title>Exemplo</title>
+<meta charset="UTF  -8">
+</head>
+<body> 
+<h3>Função que não será executada pois tem o mesmo nome de uma variável global.</h3>
+Ao criar uma variável global e posteriormente usála em uma função de mesmo nome. A mesma ( função ) não irá ser executada.
+<br>
+                            <!-- Botoes de teste-->
+<!-- botao que exeuta a função de teste -->
+<button onclick="f1()">com erro</button><!-- Botao com a funcao errada -->
+<button onclick="f2()">Sem erro</button><!-- botao com a funcao certa -->
+<script>
+//---------------------------------------função com erro ------------------------------------------------------
+//Nome da função tem o mesmo nome da variável.
+var f1="teste";
+function f1(){
+                 alert(f1);}// função vai dar erro pois tem o mesmo nome q a variavel.
+//---------------------------------------função sem erro ------------------------------------------------------
+                 var funcao2="teste2";
+function f2(){
+                 alert(funcao2);}// função vai dar erro pois tem o mesmo nome q a variavel.             
+</script>
+
+</body>
+</html>
