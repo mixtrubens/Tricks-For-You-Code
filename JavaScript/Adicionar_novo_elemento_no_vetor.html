@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Vetores</h2>
+
+<p>O método "push" adiciona um novo elemento no vetor.</p>
+
+<button onclick="myFunction()">Adicionar novo elemento</button> <!-- Ao clicar no botão executa a função "myFunction". -->
+
+<p id="demo"></p><!-- lugar onde aparecerá a mensagem-->
+
+<script>
+var elementos = ["1", "2", "3", "4", "5"];//vetor.
+document.getElementById("demo").innerHTML = elementos; //escreve o vetor .
+
+function myFunction() { // função que adiciona um novo elemento ao vetor. 
+  elementos.push("6");//método " push " anexado ao vetor "elementos".
+  document.getElementById("demo").innerHTML = elementos; // escrevendo novamento o vetor, agora com o novo elemento .
+}
+</script>
+
+</body>
+</html>
