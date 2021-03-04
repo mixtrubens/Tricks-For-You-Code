@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Center the loader */
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+.img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  width: 520px;
+  margin: -190px 0 0 -250px;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#botao{ text-align: center }
+.botaoEnviar{
+    width: 350px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #FCC302;
+    font-size: 18px;
+}
+</style>
+</head>
+   <div id="botao">
+      <input  onclick="Loading();" type="submit" name="botao" value="Clique AQUI" class="botaoEnviar" />
+   </div>
+<div class="loader" id="displayLoader" style="display:none;"></div><!-- Inicia o Spinner invisível. -->
+<div style="display:none" class='img' id="Imagem"><img src="https://thumbs.gfycat.com/GiganticVillainousDegu.webp" height="350px"></div><!-- Inicia O gif invisível. -->
+
+</div>
+
+<script>
+function Loading(){
+document.getElementById("displayLoader").style.display = "block";//inicia o o display do Spinner.
+setTimeout(function(){ 
+  document.getElementById("displayLoader").style.display = "none";//depois de 3 segundos o Spinner fica invisível.
+  document.getElementById("Imagem").style.display = "block";//depois de 3 segundos o Gif fica visível.
+  }, 3000);
+
+}
+
+
+
+</script>
+
+</body>
+</html>
