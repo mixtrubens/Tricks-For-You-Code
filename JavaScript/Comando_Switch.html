@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+<meta charset="UTF-8">    
+<h2>Testando o comando  switch</h2>
+Exemplo de uma aplicação do comando "switch"
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<script>
+var x = 1; // a variável x tem como resultado o valor "3"
+
+// exemplo 1 
+switch (x) { // x é a condição, nele pode ser tanto um valor inteiro, ou uma expressão.
+  case 0:// caso x tenha valor = 0.
+    text = "x vale Zero";
+    break;
+  case 1:// caso x tenha valor = 1.
+    text = "x Vale Um ";
+    break;// para a instrução.
+  default:// caso  x não tenha nenhum valor correspondente .
+    text = "X não tem valor encontrado";
+}
+document.getElementById("demo").innerHTML = text;
+
+// exemplo 2
+switch (x+4) { // x é a condição, nele pode ser tanto um valor inteiro, ou uma expressão.
+  case 1:          // caso x tenha valor = 1.
+    text2 = "x vale um";
+    break;// para a instrução.
+  case 5: // caso x tenha valor = 5.
+    text2 = "x Vale cinco ";
+    break;// para a instrução.
+  default:// caso  x não tenha nenhum valor correspondente.
+    text2 = "X não tem valor encontrado";
+}
+document.getElementById("demo2").innerHTML = text2;
+</script>
+
+</body>
+</html>
