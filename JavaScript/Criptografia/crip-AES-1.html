@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+
+<body>
+Full working sample actually is:
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+
+<br><br>
+<label>encrypted</label>
+<div id="demo1"></div>
+<br>
+
+<label>decrypted</label>
+<div id="demo2"></div>
+
+<br>
+<label>Actual Message</label>
+<div id="demo3"></div>
+
+<br>
+<label>Teste Decodificação</label>
+<div id="demo4"></div>
+<script>
+//Fução Que "Encripta a Senha"
+var encrypted = CryptoJS.AES.encrypt("Message", "Secret"); // Cria uma palavra Randômica a partir da 'senha' + 'cifra'.
+//U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=
+//Fução Que "Descriptografa a Senha"
+var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret"); // Senha Descriptografada a partir da palavra randômica e gera uma palavra estática.
+//4d657373616765
+
+//teste Decodificação
+var PalavraRandonGerada = 'U2FsdGVkX1/NbwNZHPmTbk1SNgOVF4xZ1m1v40Osz1Q=';
+var Parametro = CryptoJS.AES.decrypt(PalavraRandonGerada, "Secret");
+
+
+document.getElementById("demo1").innerHTML = encrypted;
+document.getElementById("demo2").innerHTML = decrypted;
+document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+document.getElementById("demo4").innerHTML = Parametro;
+
+
+    
+
+</script>
+
+</body>
+
+</html>
